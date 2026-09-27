@@ -1,0 +1,14 @@
+[theme]
+base = "dark"
+primaryColor = "#1F6F5C"
+
+# Warna utama halaman
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#161B22"
+textColor = "#F0F6FC"
+
+# Warna elemen pendukung
+borderColor = "#30363D"
+codeBackgroundColor = "#0D1117"
+codeTextColor = "#7EE2A8"
+linkColor = "#2EA043"

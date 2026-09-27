@@ -1,0 +1,167 @@
+/* =========================================================
+   STYLE.CSS — n8n DYNAMIC THEME & SOFT PALETTE
+   (variabel tema didefinisikan secara dinamis di app.py)
+   ========================================================= */
+
+/* --- Ukuran font mengikuti pengaturan pengguna --- */
+.stMarkdown,
+.stChatInput,
+div[data-testid="stChatMessage"] p,
+.stSidebar {
+    font-size: var(--base-font-size) !important;
+}
+
+/* --- Latar & warna teks utama aplikasi --- */
+.stApp {
+    background: var(--app-bg) !important;
+    color: var(--app-text) !important;
+}
+
+/* =========================================================
+   CHAT BUBBLES (gabungan style umum + per-role)
+   ========================================================= */
+div[data-testid="stChatMessage"] {
+    padding: 1.2rem;
+    border-radius: 14px !important;
+    margin-bottom: 18px !important;
+    font-size: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+div[data-testid="stChatMessage"]:has(div[data-testid="stChatMessageAvatarUser"]),
+[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-user"]) {
+    background: var(--primary-color) !important;
+    border: 1px solid var(--accent-color) !important;
+    border-left: 4px solid var(--accent-color) !important;
+    color: #FFFFFF !important;
+}
+
+div[data-testid="stChatMessage"]:has(div[data-testid="stChatMessageAvatarAssistant"]),
+[data-testid="stChatMessage"]:has([data-testid="chatAvatarIcon-assistant"]) {
+    background: var(--panel-bg) !important;
+    border: 1px solid rgba(128, 140, 150, 0.22) !important;
+    color: var(--app-text) !important;
+}
+
+/* =========================================================
+   SIDEBAR — MENGIKUTI WARNA TEMA SEPENUHNYA
+   ========================================================= */
+[data-testid="stSidebar"],
+[data-testid="stSidebar"]>div:first-child,
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] {
+    background: var(--sidebar-bg) !important;
+}
+
+[data-testid="stSidebar"] {
+    border-right: 1px solid var(--accent-color) !important;
+    border-radius: 0 24px 24px 0 !important;
+    overflow: hidden !important;
+    box-shadow: 10px 0 28px rgba(0, 0, 0, 0.18) !important;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p,
+[data-testid="stSidebar"] span,
+[data-testid="stSidebar"] label {
+    color: #FFFFFF !important;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Tombol & input di dalam sidebar */
+[data-testid="stSidebar"] .stButton>button,
+[data-testid="stSidebar"] .stDownloadButton>button {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    min-height: 40px !important;
+    transition: background 100ms ease, border-color 100ms ease !important;
+}
+
+[data-testid="stSidebar"] .stButton>button:hover,
+[data-testid="stSidebar"] .stDownloadButton>button:hover {
+    background: var(--accent-color) !important;
+    border-color: #FFFFFF !important;
+    color: #FFFFFF !important;
+}
+
+[data-testid="stSidebar"] input,
+[data-testid="stSidebar"] textarea {
+    border-radius: 12px !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #FFFFFF !important;
+    background: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* =========================================================
+   NATIVE STREAMLIT CHAT INPUT
+   ========================================================= */
+[data-testid="stChatInput"] {
+    border: 1px solid var(--accent-color) !important;
+    border-radius: 14px !important;
+    background: var(--panel-bg) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20) !important;
+}
+
+[data-testid="stChatInput"]:focus-within {
+    border-color: var(--accent-color) !important;
+}
+
+[data-testid="stChatInput"] textarea {
+    background: transparent !important;
+    color: var(--app-text) !important;
+}
+
+[data-testid="stChatInput"] textarea::placeholder {
+    color: var(--muted-text) !important;
+}
+
+[data-testid="stChatInput"] button {
+    background: var(--primary-color) !important;
+    color: #FFFFFF !important;
+    border: 1px solid var(--accent-color) !important;
+    border-radius: 10px !important;
+}
+
+/* =========================================================
+   GENERAL BUTTONS & FEEDBACK (gabungan semua tombol umum)
+   ========================================================= */
+.stButton button,
+.stButton>button,
+.stDownloadButton>button {
+    border-radius: 10px !important;
+    border: 1px solid rgba(139, 92, 246, 0.3) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--app-text);
+    transition: all 0.2s ease-in-out;
+}
+
+.stButton button:hover,
+.stButton>button:hover,
+.stDownloadButton>button:hover {
+    border-color: var(--accent-color) !important;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   ELEMEN LAIN-LAIN
+   ========================================================= */
+a {
+    color: var(--accent-color) !important;
+}
+
+code {
+    background: var(--panel-bg) !important;
+    color: var(--app-text) !important;
+}
+
+.block-container {
+    padding-bottom: 6rem !important;
+}
