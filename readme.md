@@ -56,7 +56,7 @@ Materi yang dibahas di dalam dokumen referensi mencakup:
 * **Temperatur:** Ditetapkan pada nilai `temperature = 0` untuk memastikan kepatuhan mutlak terhadap isi dokumen acuan serta meminimalisir risiko halusinasi data teknis.
 * **Estimasi Biaya Operasional:**
   * **API LLM (Groq):** Sangat ekonomis. Pada tier pengembangan dan uji coba (*Free Tier / Developer Tier*), biaya per 1 juta token input/output berkisar antara **$0.05 hingga $0.10**, atau bahkan gratis untuk batas kuota harian tertentu. Jika diasumsikan rata-rata penggunaan harian mencapai 50.000 token, estimasi biaya bulanan kurang dari **$0.50 – $1.50 per bulan**.
-  * **Vector Database & Hosting:** Menggunakan penyimpanan *in-memory* berbasis ChromaDB dengan *embedder* ONNX bawaan (`all-MiniLM-L6-v2`), sehingga **biaya infrastruktur database adalah $0 (gratis)**[cite: 2]. Pendekatan ini jauh lebih ringan tanpa beban *overhead* kuota memori fisik disk maupun dependensi eksternal tambahan[cite: 2].
+  * **Vector Database & Hosting:** Menggunakan penyimpanan *in-memory* berbasis ChromaDB dengan *embedder* ONNX bawaan (`all-MiniLM-L6-v2`), sehingga **biaya infrastruktur database adalah $0 (gratis)**[cite: 2]. Pendekatan ini jauh lebih ringan tanpa beban *overhead* kuota memori fisik disk maupun dependensi eksternal tambahan.
 
 ---
 
